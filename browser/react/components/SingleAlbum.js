@@ -50,7 +50,13 @@ export default class SingleAlbum extends Component {
     return (
       <div className="album">
         <div>
-          <h3>{ album.name }</h3>
+          <div>
+            <h3 style={{display: "inline"}}>{ album.name } </h3>
+            <button className="btn btn-default">
+              <span className="glyphicon glyphicon-copy"></span>
+            </button>
+          </div>
+  
           <img src={ album.imageUrl } className="img-thumbnail" />
         </div>
         <Songs songs={album.songs} />

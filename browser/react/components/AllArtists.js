@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import axios from 'axios';
 
 export default class AllArtists extends React.Component{
@@ -27,7 +27,7 @@ export default class AllArtists extends React.Component{
 			      this.state.artists.map(artist => {
 			        return (
 			          <div className="list-group-item" key={artist.id}>
-			            <Link to={`/artists/${artist.id}`}>{ artist.name }</Link>   
+			            <NavLink to={`/artists/${artist.id}`}>{ artist.name }</NavLink>   
 			          </div>
 			        )    
 			      })
